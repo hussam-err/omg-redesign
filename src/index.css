@@ -1,0 +1,27 @@
+@import url("https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&display=swap");
+
+@import "tailwindcss";
+
+body {
+  font-family: "Kode Mono", monospace;
+  background-color: #e5e5e5;
+}
+
+@theme {
+  --breakpoint-xs: 480px;
+  --breakpoint-3xl: 1650px;
+  --breakpoint-4xl: 2200px;
+
+  --color-midnight-purple: #210243;
+  --color-crimson-rose: #e21a3f;
+  --color-sky-blue: #29c5ff;
+}
+
+@utility main-container {
+  @apply mx-auto max-w-[1700px] xl:max-w-[1350px];
+}
+
+
+@utility padding-container {
+  @apply 3xl:px-5 px-6 lg:px-10;
+}
