@@ -18,7 +18,7 @@ body {
 }
 
 @utility main-container {
-  @apply mx-auto max-w-[1700px] xl:max-w-[1350px];
+  @apply mx-auto max-w-[1700px] ;
 }
 
 
