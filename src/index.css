@@ -18,9 +18,8 @@ body {
 }
 
 @utility main-container {
-  @apply mx-auto max-w-[1700px] ;
+  @apply mx-auto max-w-[1700px];
 }
-
 
 @utility padding-container {
   @apply 3xl:px-5 px-6 lg:px-10;
