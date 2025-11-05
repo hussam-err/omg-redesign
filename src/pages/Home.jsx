@@ -2,32 +2,24 @@
 import Bg_Hero from "../assets/images/backgrounds/Bg_HeroGradient.png";
 import Element_Hero2 from "../assets/images/elements/IMG_HeroFace.png";
 import Element_Hero1 from "../assets/images/elements/Overlay_Elements.png";
+
+//* COMPONENTS IMPORTS
+import { Dots, Button } from "../components/ui";
 const Home = () => {
   return (
     <>
       <section
-        className="bg-cover bg-center h-[812px] md:h-[1114px] lg:h-[926px]"
+        className="bg-cover bg-center min-h-screen"
         style={{ backgroundImage: `url(${Bg_Hero})` }}
       >
         {/* Hero Section Decoration */}
-        {/* Left Side Dots */}
-        <div className="absolute top-62 xs:top-75 left-2 flex flex-col items-center gap-1 xs:gap-3 md:top-113 lg:top-87">
-          <div className="size-0.5 bg-white" />
-          <div className="size-0.5 bg-white" />
-          <div className="size-0.5 bg-white" />
-          <div className="size-0.5 bg-white" />
-        </div>
-        {/* Right Side Dots */}
-        <div className="absolute top-30 right-5 flex flex-col items-center gap-3">
-          <div className="size-0.5 bg-white" />
-          <div className="size-0.5 bg-white" />
-          <div className="size-0.5 bg-white" />
-          <div className="size-0.5 bg-white" />
-          <div className="h-30 w-0.5 bg-white" />
-        </div>
+        <Dots
+          right="top-62 xs:top-75 left-2 xs:gap-3 md:top-113 lg:top-87"
+          left="top-30 right-5"
+        />
 
         {/* Grid Area */}
-        <div className="main-container padding-container h-[812px] md:h-[1114px] lg:h-[926px] grid grid-cols-1 items-center overflow-clip xl:grid-cols-2">
+        <div className="main-container padding-container min-h-screen grid grid-cols-1 items-center overflow-clip xl:grid-cols-2">
           {/* Left Grid */}
           <div className="relative">
             {/* Grid Decoration */}
@@ -35,6 +27,7 @@ const Home = () => {
               src={Element_Hero1}
               alt="Hero Section Element 1"
               className="absolute left-18 -bottom-13 xs:left-0 xs:-bottom-85 md:-bottom-46 md:left-50 lg:-bottom-90 lg:left-20"
+              aria-hidden="true"
             />
             {/* Grid Content */}
             <div>
@@ -49,25 +42,7 @@ const Home = () => {
                 experiences that don't just impress — they blow minds.
               </p>
 
-              <button className="bg-midnight-purple flex items-center px-6 py-3 font-bold text-white uppercase relative">
-                learn more
-                <svg
-                  width="20"
-                  height="20"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="ml-2"
-                >
-                  <path
-                    d="M7 17L17 7M17 7H8M17 7V16"
-                    stroke="#ffffff"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
-              </button>
+              <Button text="learn more" />
             </div>
           </div>
 
@@ -78,6 +53,7 @@ const Home = () => {
               src={Element_Hero2}
               alt="Hero Section Shape"
               width={600}
+              aria-hidden="true"
             />
           </div>
         </div>
